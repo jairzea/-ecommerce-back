@@ -1,0 +1,36 @@
+
+
+30/09/2022 20:51:58
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/09/2022 20:55:52
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/09/2022 20:58:18
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/09/2022 20:58:35
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/09/2022 20:58:47
+message => The password field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/09/2022 21:00:12
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+30/09/2022 21:00:37
+message => The password field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
