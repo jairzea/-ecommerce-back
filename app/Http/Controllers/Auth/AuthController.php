@@ -15,7 +15,7 @@ class AuthController extends Controller
      /**
      * Registro de usuario
      */
-    public function signUp(Request $request)
+    public static function signUp(Request $request)
     {
         try {
             
@@ -37,7 +37,7 @@ class AuthController extends Controller
 
         } catch (Exception $e) {
 
-            return return_exceptions($e);
+            return returnExceptions($e);
 
         }
         
@@ -46,7 +46,7 @@ class AuthController extends Controller
     /**
      * Inicio de sesión y creación de token
      */
-    public function login(Request $request)
+    public static function login(Request $request)
     {
         try {
             
@@ -79,7 +79,7 @@ class AuthController extends Controller
 
         } catch (Exception $e) {
 
-            return return_exceptions($e);
+            return returnExceptions($e);
 
         }
         
@@ -101,9 +101,38 @@ class AuthController extends Controller
 
         } catch (Exception $e) {
 
-            return return_exceptions($e);
+            return returnExceptions($e);
 
         }
         
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public static function getToken()
+    {
+        try {
+                
+            $user = User::all()->first();
+
+            $tokenResult = $user->createToken('Personal Access Token');
+            
+            $token = $tokenResult->token;
+            if ($user->remember_me)
+                $token->expires_at = Carbon::now()->addWeeks(1);
+            $token->save();
+    
+            return response()->json([
+                'access_token' => $tokenResult->accessToken
+            ]);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        }
     }
 }

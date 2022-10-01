@@ -19,18 +19,15 @@ return new class extends Migration
             $table->string('customer_email'); 
             $table->string('customer_mobile'); 
             $table->string('id_product'); 
-            $table->text('requestId'); 
-            $table->text('reference'); 
-            $table->text('processUrl'); 
+            $table->text('requestId')->nullable();
+            $table->text('reference')->nullable();
+            $table->text('processUrl')->nullable();
             $table->string('status'); 
-            $table->text('message'); 
-            $table->text('date_trans'); 
-            $table->text('method'); 
-            $table->text('ref_int'); 
-            $table->text('bank'); 
-            $table->text('id_cliente'); 
-            $table->text('llave_secreta'); 
-            $table->text('token');
+            $table->text('message')->nullable();
+            $table->text('date_trans')->nullable();
+            $table->text('method')->nullable();
+            $table->text('ref_int')->nullable();
+            $table->text('bank')->nullable();
             $table->timestamps();
         });
     }

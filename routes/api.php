@@ -4,6 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ViewProductOrderController;
 
 
 /*
@@ -21,14 +24,34 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['prefix' => 'auth'], function () 
+Route::group(['prefix' => env('API_VERSION')], function () 
 {
-    Route::post('/login',[AuthController::class, 'login']);
-    Route::post('/signup',[AuthController::class, 'signUp']);
+    Route::post('/auth/login',[AuthController::class, 'login']);
+    Route::post('/auth/signup',[AuthController::class, 'signUp']);
 
     Route::group(['middleware' => 'auth:api'], function() 
     {
-        Route::post('/logout',[AuthController::class, 'logout']);
-        //Route::get('user', 'AuthController@user');
+        Route::post('/auth/logout',[AuthController::class, 'logout']);
+
+        // ---------------------------------------------------------------------
+        // Products
+        // --------------------------------------------------------------------- 
+        Route::get('products', [ProductController::class, 'index']);
+        Route::post('products', [ProductController::class, 'store']);
+
+        // ---------------------------------------------------------------------
+        // Orders
+        // --------------------------------------------------------------------- 
+        Route::get('orders', [OrderController::class, 'index']);
+        Route::post('orders', [OrderController::class, 'store']);
+
+        // ---------------------------------------------------------------------
+        // View product orders
+        // --------------------------------------------------------------------- 
+        Route::get('orders_product', [ViewProductOrderController::class, 'index']);
+        Route::get('orders_product_user', [ViewProductOrderController::class, 'showUserMail']);
+
+
+        
     });
 });

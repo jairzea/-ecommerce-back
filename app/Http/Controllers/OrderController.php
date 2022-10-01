@@ -4,27 +4,41 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Exception;
 
 class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request  $request)
     {
-        //
-    }
+        try {
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+            $limit = $request->get('limit');
+
+            $consult = Order::paginate($limit);
+
+            $users = array(
+                "_rel"		=> "orders",
+                "_embedded" => array(
+                    "orders" => $consult
+                )
+            );
+
+            if(empty($consult))
+                throw new Exception("No se encontraron registros");
+
+            return response()->json(["response" => $users], 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        }
     }
 
     /**
@@ -35,7 +49,32 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+
+            $request->validate([
+                'name' => 'required|string|max:80',
+                'email' => 'required|string|email|max:120',
+                'mobile' => 'required|string|max:40',
+                'id' => 'required|integer|exists:products'
+            ]);
+
+            $insertData = [
+                "customer_name" => $request->input("name"), 
+                "customer_email" => $request->input("email"), 
+                "customer_mobile" => $request->input("mobile"),
+                "id_product" => $request->input("id"),
+                "status" => "CREATED"
+            ];
+
+            Order::create($insertData);
+
+            return response()->json(["message" => "Success"], 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        } 
     }
 
     /**
@@ -72,14 +111,4 @@ class OrderController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Order $order)
-    {
-        //
-    }
 }

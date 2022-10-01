@@ -23,7 +23,6 @@ return new class extends Migration
             products.img AS imagen_producto, 
             orders.id AS id_orden, 
             orders.customer_mobile AS telefono, 
-            orders.token 
         FROM orders orders
         INNER JOIN products products
             ON orders.id_product = products.id");

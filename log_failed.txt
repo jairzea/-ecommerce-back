@@ -1,0 +1,417 @@
+
+
+01/10/2022 15:07:26
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 15:47:53
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 15:49:52
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 15:49:52
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 15:51:23
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 15:54:49
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 15:59:57
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 16:07:54
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 16:17:51
+message => The email has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 17:54:07
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = uwVq79KKbE@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 17:54:07
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = nj4xgX6nsN@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 17:54:27
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = 1iM7CCQion@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 17:54:27
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = aaEdFQXgHY@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 17:58:23
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = JMUNEUciMd@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 17:58:23
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = 0FfEYhu2bZ@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:00:52
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = 9Hn4TshHeb@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:00:52
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = SCQii5tndR@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:03:01
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = QbBGRQZ6gz@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:03:01
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = Bg9GV6R9Ig@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:04:03
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = Eyuj7RuztR@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:04:03
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = TkJSyaMUwC@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:04:31
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `products` where `id` = 2)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:04:31
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = eUHHSqJZbP@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:04:31
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = wD09z9v2D0@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:06:18
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `products` where `id` = 2)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:06:18
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = dJ0nV0M7UH@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:06:18
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = pG6WupeTcA@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:06:44
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `products` where `id` = 2)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:06:44
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = k7oNSRkJFO@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:06:44
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = tm0hHI65Qg@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:07:06
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `products` where `id` = 2)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:07:06
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = j235TUs77o@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:07:06
+message => SQLSTATE[HY000] [2002] Connection refused (SQL: select count(*) as aggregate from `users` where `email` = sAKQSzzA8g@mail.com)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 18:07:58
+message => The email must be a valid email address.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:08:15
+message => The email must be a valid email address.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:10:41
+message => The email must be a valid email address. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:10:41
+message => Personal access client not found. Please create one.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/passport/src/ClientRepository.php
+line => 122
+
+01/10/2022 18:11:11
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:11:11
+message => Personal access client not found. Please create one.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/passport/src/ClientRepository.php
+line => 122
+
+01/10/2022 18:11:51
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:11:51
+message => Personal access client not found. Please create one.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/passport/src/ClientRepository.php
+line => 122
+
+01/10/2022 18:12:39
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:12:39
+message => Personal access client not found. Please create one.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/passport/src/ClientRepository.php
+line => 122
+
+01/10/2022 18:16:01
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:16:01
+message => Personal access client not found. Please create one.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/passport/src/ClientRepository.php
+line => 122
+
+01/10/2022 18:16:01
+message => Expected response status code [200] but received 500.
+Failed asserting that 200 is identical to 500.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php
+line => 122
+
+01/10/2022 18:16:43
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:16:43
+message => Personal access client not found. Please create one.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/passport/src/ClientRepository.php
+line => 122
+
+01/10/2022 18:17:51
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:18:43
+message => The email field is required. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:21:02
+message => The email field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:21:16
+message => The email field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:53:08
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:53:31
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:53:31
+message => The name must be a string. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:53:54
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:53:54
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:54:21
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:56:02
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 18:59:32
+message => The name field is required. (and 2 more errors)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:02:02
+message => The name must be a string. (and 1 more error)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:06:37
+message => The name must be a string.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:14:44
+message => The email field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:14:44
+message => The email field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:14:45
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:19:17
+message => Array to string conversion
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/Auth/AuthController.php
+line => 66
+
+01/10/2022 19:19:17
+message => Array to string conversion
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/Auth/AuthController.php
+line => 66
+
+01/10/2022 19:30:07
+message => The name field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 19:34:23
+message => The name field is required.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:14:08
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access_token' in 'field list' (SQL: select `access_token` from `users`)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 20:14:36
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access_token' in 'field list' (SQL: select `access_token` from `users`)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 20:14:36
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:15:16
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:15:41
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access_token' in 'field list' (SQL: select `access_token` from `users`)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 20:15:56
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access_token' in 'field list' (SQL: select `access_token` from `users`)
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
+line => 759
+
+01/10/2022 20:15:56
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:25:45
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:29:19
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:31:55
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:32:03
+message => The name must be a string.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:32:34
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:32:44
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+01/10/2022 20:35:29
+message => The name must not be greater than 80 characters.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

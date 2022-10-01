@@ -1,11 +1,11 @@
 <?php
 
-if (! function_exists('server_path')) {
-    function server_path()
+if (! function_exists('serverPath')) {
+    function serverPath()
     {
         $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://';
 
-        $path = ( env('AMBIENT') === 'DEV' ) ? $_SERVER['PATH_INFO'] : $_SERVER['REDIRECT_SCRIPT_URL'];
+        $path = $_SERVER['REQUEST_URI'];
         
         return $protocol . $_SERVER['HTTP_HOST'] . $path;
     }
@@ -13,8 +13,8 @@ if (! function_exists('server_path')) {
 
 
 
-if (! function_exists('return_exceptions')) {
-    function return_exceptions($e)
+if (! function_exists('returnExceptions')) {
+    function returnExceptions($e)
     { 
         $logFile = fopen("log_failed.txt", 'a') or die("Error creando archivo");
 
@@ -35,6 +35,7 @@ if (! function_exists('return_exceptions')) {
         ], 500);
     }
 }
+
 
 if(!function_exists('validate_signature')) {
     function validate_signature($data, $signatue, $div, $timestamp)
@@ -63,7 +64,13 @@ if(!function_exists('validate_signature')) {
 }
 
 if(!function_exists('calculate_signature')) {
-    function calculate_signature($arrayStr){
+    function calculate_signature($data){
+
+         // Generamos el id_cliente y la llave_secreta
+         $id_cliente = str_replace("$", "a", Hash::make($data["customer_name"].$data["customer_email"].$data["customer_mobile"]));
+         $llave_secreta = str_replace("$","o", Hash::make($data["customer_email"].$data["customer_name"].$data["customer_mobile"], ['rounds' => 12]));
+
+         $token = "Basic ".base64_encode($id_cliente.":".$llave_secreta);
         
         $concatenatedString = '';
 
