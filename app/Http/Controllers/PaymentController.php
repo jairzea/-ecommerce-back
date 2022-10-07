@@ -34,74 +34,6 @@ class PaymentController extends Controller
             ]
             ]);
     }
-    // public function createSession()
-    // {
-    //     $curl = curl_init();
-
-    //     if (function_exists('random_bytes')) {
-    //         $nonce = bin2hex(random_bytes(16));
-    //     } elseif (function_exists('openssl_random_pseudo_bytes')) {
-    //         $nonce = bin2hex(openssl_random_pseudo_bytes(16));
-    //     } else {
-    //         $nonce = mt_rand();
-    //     }
-
-    //     $seed = date("c");
-    //     $login = env('LOGIN');
-    //     $secretKey = env('SECRET_KEY');
-
-    //     $nonceBase64 = base64_encode($nonce);
-
-    //     $tranKey = base64_encode(sha1($nonce . $seed . $secretKey, true));
-
-    //     curl_setopt_array($curl, [
-    //         CURLOPT_URL => "https://checkout-test.placetopay.com/api/session",
-    //         CURLOPT_RETURNTRANSFER => true,
-    //         CURLOPT_ENCODING => "",
-    //         CURLOPT_MAXREDIRS => 10,
-    //         CURLOPT_TIMEOUT => 30,
-    //         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    //         CURLOPT_CUSTOMREQUEST => "POST",
-    //         // CURLOPT_POSTFIELDS => "{\n  \"locale\": \"es_CO\",\n  \"auth\": {\n    \"login\": \"$login\",\n    \"tranKey\": \"$tranKey\",\n    \"nonce\": \"$nonceBase64\",\n    \"seed\": \"$seed\"\n  },\n  \"payment\": {\n    \"reference\": \"1122334455\",\n    \"description\": \"Prueba\",\n    \"amount\": {\n      \"currency\": \"USD\",\n      \"total\": 100\n    }\n  },\n  \"expiration\": \"2021-12-30T00:00:00-05:00\",\n  \"returnUrl\": \"https://dnetix.co/p2p/client\",\n  \"ipAddress\": \"127.0.0.1\",\n  \"userAgent\": \"PlacetoPay Sandbox\"\n}",
-
-
-    //         CURLOPT_POSTFIELDS => '{
-    //             "locale": "es_CO",  
-    //             "auth": {
-    //                     "login": "'.$login.'",
-    //                     "tranKey": "'.$tranKey.'",
-    //                     "nonce": "'.$nonce.'",
-    //                     "seed": "'.$seed.'"
-    //               },
-    //               "payment": {
-    //                     "reference": "1122334455",
-    //                     "description": "Prueba",
-    //                     "amount": {
-    //                       "currency": "COP",
-    //                       "total": 100
-    //                 }
-    //           },
-    //               "expiration": "2021-12-30T00:00:00-05:00",
-    //               "returnUrl": "https://dnetix.co/p2p/client",
-    //               "ipAddress": "127.0.0.1",
-    //               "userAgent": "PlacetoPay Sandbox"
-    //         }',
-    //         CURLOPT_HTTPHEADER => [
-    //             "Content-Type: application/json"
-    //         ],
-    //     ]);
-
-    //     $response = curl_exec($curl);
-    //     $err = curl_error($curl);
-
-    //     curl_close($curl);
-
-    //     if ($err) {
-    //     echo "cURL Error #:" . $err;
-    //     } else {
-    //     echo $response;
-    //     }
-    // }
 
     private static function createPaymentArray($orderId, $description = '')
     {
@@ -198,23 +130,9 @@ class PaymentController extends Controller
             $response = $this->placetopay->query($order->requestId);
 
             if ($response->isSuccessful()) {
+
+                $responsePlacetopay = self::paymentResponseArray($response);
                 
-                if($response->status()->status() == 'PENDING'){
-
-                    $responsePlacetopay = ['status' => $response->status()->status()];
-
-                }else{
-
-                    $responsePlacetopay = [
-                        'status' => $response->payment[0]->status()->status(),
-                        'message' => $response->payment[0]->status()->message(),
-                        'date_trans' => $response->payment[0]->status()->date(),
-                        'method' => $response->payment[0]->paymentMethodName(),
-                        'ref_int' => $response->payment[0]->internalReference(),
-                        'bank' => $response->payment[0]->issuerName()
-                    ];
-                }
-    
                 $updateOrder = new OrderController();
                 $updateOrder->edit('id', $order->id, $responsePlacetopay);
 
@@ -231,5 +149,39 @@ class PaymentController extends Controller
 
         }
         
+    }
+    
+    public static function paymentResponseArray($response)
+    {
+        switch ($response->status()->status()) {
+
+            case 'APPROVED':
+                
+                $data = [
+                          'status'     => $response->payment[0]->status()->status(),
+                          'message'    => $response->payment[0]->status()->message(),
+                          'date_trans' => $response->payment[0]->status()->date(),
+                          'method'     => $response->payment[0]->paymentMethodName(),
+                          'ref_int'    => $response->payment[0]->internalReference(),
+                          'bank'       => $response->payment[0]->issuerName()
+                        ];
+
+                break;
+
+            default:
+                
+                $data = [
+                          'status'     => $response->status()->status(),
+                          'message'    => $response->status()->message(),
+                          'date_trans' => $response->status()->date(),
+                          'method'     => '',
+                          'ref_int'    => '',
+                          'bank'       => ''
+                        ];
+                    
+                break;
+        }
+
+        return $data;
     }
 }

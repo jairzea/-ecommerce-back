@@ -14,3 +14,23 @@ line => 224
 message => No fue posible actualizar la orden
 file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/PaymentController.php
 line => 223
+
+07/10/2022 05:26:29
+message => Undefined variable $reference
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/PaymentController.php
+line => 249
+
+07/10/2022 14:36:39
+message => The selected reference is invalid.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+07/10/2022 14:37:14
+message => Trying to access array offset on value of type null
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/PaymentController.php
+line => 158
+
+07/10/2022 16:17:35
+message => The name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

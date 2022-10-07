@@ -415,3 +415,13 @@ line => 323
 message => The name must not be greater than 80 characters.
 file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
 line => 323
+
+07/10/2022 16:05:18
+message => The name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323
+
+07/10/2022 16:10:44
+message => The name has already been taken.
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+line => 323

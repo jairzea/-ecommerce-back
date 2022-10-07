@@ -14,10 +14,12 @@ class ProducTest extends TestCase
     {
         $token = AuthController::getToken();
 
+        $name = randomCredentials()['name'];
+
         $this->withHeaders([
             'Authorization' => 'Bearer ' . $token->original['access_token'],
         ])->post('api/' . env('API_VERSION') . '/products', [
-            "name" => 'Test Create Product',
+            "name" => $name,
             "description"  => 'Lorem impsum',
             "price" => '40000',
             "img" => "https://#"

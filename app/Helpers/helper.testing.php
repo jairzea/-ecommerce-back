@@ -6,7 +6,8 @@ if (!function_exists('randomCredentials')) {
 
         return [
             'email' => "$str_ran@mail.com",
-            'password' => "123456"
+            'password' => "123456",
+            'name' => $str_ran
         ];
     }
 }
