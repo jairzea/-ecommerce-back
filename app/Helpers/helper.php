@@ -99,20 +99,6 @@ if(!function_exists('save_file')) {
     }
 }
 
-if (!function_exists('calculate_amount_in_cents')) {
-    function calculate_amount_in_cents($amount_to_paid, $coupon_status, $percentage){
-
-        //(convertimos el valor a pagar en centavos (x 100))
-        $amount_centies = $amount_to_paid * 1000;
-
-        //Aplicacion de descuento si es efectivo el cupon
-        if($coupon_status)
-            $amount_centies = $amount_centies - $amount_centies * $percentage / 100;
-        
-        return $amount_centies;
-    }
-}
-
 if(!function_exists('validate_environment')){
     function validate_environment(){
 

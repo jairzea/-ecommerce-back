@@ -7,7 +7,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ViewProductOrderController;
-
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,14 +44,19 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         // --------------------------------------------------------------------- 
         Route::get('orders', [OrderController::class, 'index']);
         Route::post('orders', [OrderController::class, 'store']);
+        Route::get('orders/{order}', [OrderController::class, 'show']);
 
         // ---------------------------------------------------------------------
         // View product orders
         // --------------------------------------------------------------------- 
         Route::get('orders_product', [ViewProductOrderController::class, 'index']);
         Route::get('orders_product_user', [ViewProductOrderController::class, 'showUserMail']);
-
-
+        
+        // ---------------------------------------------------------------------
+        // Payments
+        // --------------------------------------------------------------------- 
+        Route::post('payment_request', [PaymentController::class, 'createPaymentSession']);
+        Route::post('response_place_to_pay', [PaymentController::class, 'responseHandlingPlaceToPay']);
         
     });
 });

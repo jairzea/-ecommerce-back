@@ -1,36 +1,16 @@
 
 
-01/10/2022 19:20:18
-message => Array to string conversion
-file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/Auth/AuthController.php
-line => 66
-
-01/10/2022 20:19:00
-message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'access_token' in 'field list' (SQL: select `access_token` from `users`)
+07/10/2022 04:51:41
+message => SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order' in 'where clause' (SQL: select count(*) as aggregate from `orders` where `order` = 15)
 file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
 line => 759
 
-01/10/2022 20:23:03
-message => Undefined variable $request
-file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/UserController.php
-line => 26
+07/10/2022 04:53:43
+message => No fue posible actualizar la orden
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/PaymentController.php
+line => 224
 
-01/10/2022 20:34:44
-message => Attempt to read property "access_token" on array
-file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/OrderController.php
-line => 38
-
-01/10/2022 20:39:29
-message => The price field is required. (and 1 more error)
-file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
-line => 323
-
-01/10/2022 20:39:39
-message => The img field is required.
-file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Support/helpers.php
-line => 323
-
-01/10/2022 20:39:46
-message => SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null (SQL: insert into `products` (`name`, `description`, `price`, `img`, `updated_at`, `created_at`) values (Zapatos elegantes 1ñ, my description, 45000, ?, 2022-10-01 20:39:46, 2022-10-01 20:39:46))
-file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php
-line => 759
+07/10/2022 04:55:17
+message => No fue posible actualizar la orden
+file => /Users/jairzeapaez/Documents/Proyectos/ecommerce-back/app/Http/Controllers/PaymentController.php
+line => 223

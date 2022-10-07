@@ -83,20 +83,47 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public static function show(Order $order)
     {
-        //
+        try {
+            
+            if (empty($order))
+                throw new Exception("Error Processing Request", 1);
+
+            return response()->json($order, 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        } 
+            
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
+     * @param  $lookupColumn, $lookupValue, $arrayInsert
+     * @return message
      */
-    public function edit(Order $order)
+    public function edit($lookupColumn, $lookupValue, $arrayInsert)
     {
-        //
+        try {
+            
+            $order = Order::where($lookupColumn, $lookupValue)->first();
+
+            if(empty($order))
+                throw new Exception("No existe la orden" );
+            
+            $order->update($arrayInsert);
+
+            return response()->json(["message" => "Success"], 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        }
     }
 
     /**
@@ -106,9 +133,34 @@ class OrderController extends Controller
      * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request)
     {
-        //
+        try {
+            
+            $order = Order::find($request->input('order'));
+
+            if (empty($order))
+                throw new Exception("No existe orden con el id " . $request->input('order'));
+
+            $order->update([
+                'requestId' => $request->input('requestId'),
+                'processUrl' => $request->input('processUrl'),
+                'reference' => $request->input('reference'),
+                'status' => $request->input('status'),
+                'message' => $request->input('message'),
+                'date_trans' => $request->input('date_trans'),
+                'method' => $request->input('method'),
+                'ref_int' => $request->input('ref_int'),
+                'bank' => $request->input('bank')
+            ]);
+
+            return response()->json(["message" => "Success"], 200);
+
+        } catch (Exception $e) {
+
+            return returnExceptions($e);
+
+        } 
     }
 
 }

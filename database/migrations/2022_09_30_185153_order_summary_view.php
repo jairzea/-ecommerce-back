@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE OR REPLACE VIEW order_summary_view AS
+        DB::statement("CREATE OR REPLACE VIEW order_summary_views AS
         SELECT 
             orders.customer_name AS nombre, 
             orders.customer_email AS email, 
@@ -22,7 +22,7 @@ return new class extends Migration
             products.price AS precio_producto, 
             products.img AS imagen_producto, 
             orders.id AS id_orden, 
-            orders.customer_mobile AS telefono, 
+            orders.customer_mobile AS telefono
         FROM orders orders
         INNER JOIN products products
             ON orders.id_product = products.id");
@@ -35,7 +35,7 @@ return new class extends Migration
      */
     public function down()
     {
-        DB::statement("DROP VIEW IF EXISTS order_summary_view");
+        DB::statement("DROP VIEW IF EXISTS order_summary_views");
     }
 
 };
