@@ -73,7 +73,6 @@ class PaymentController extends Controller
 
     public function createPaymentSession(Request $request)
     {
-
         try {
 
             $request->validate([
@@ -81,7 +80,7 @@ class PaymentController extends Controller
             ]);
             
             $paymentRequest = self::createPaymentArray($request->input('order'), $request->input('description'));
-
+            
             $response = $this->placetopay->request($paymentRequest);
 
             if ($response->isSuccessful()) {

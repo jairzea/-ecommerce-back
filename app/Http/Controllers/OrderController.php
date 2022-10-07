@@ -126,41 +126,22 @@ class OrderController extends Controller
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request)
+    public static function showOnly()
     {
         try {
             
-            $order = Order::find($request->input('order'));
+            $order = Order::all()->first();
 
-            if (empty($order))
-                throw new Exception("No existe orden con el id " . $request->input('order'));
-
-            $order->update([
-                'requestId' => $request->input('requestId'),
-                'processUrl' => $request->input('processUrl'),
-                'reference' => $request->input('reference'),
-                'status' => $request->input('status'),
-                'message' => $request->input('message'),
-                'date_trans' => $request->input('date_trans'),
-                'method' => $request->input('method'),
-                'ref_int' => $request->input('ref_int'),
-                'bank' => $request->input('bank')
-            ]);
-
-            return response()->json(["message" => "Success"], 200);
+            if(empty($order))
+                throw new Exception("No hay ordenes");
+            
+            return response()->json($order, 200);
 
         } catch (Exception $e) {
 
             return returnExceptions($e);
 
-        } 
+        }
     }
 
 }

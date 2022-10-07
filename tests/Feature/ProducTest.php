@@ -26,7 +26,6 @@ class ProducTest extends TestCase
         ])
         ->assertStatus(200)
         ->assertSee('Success');
- 
     }
 
     /**  @test * */

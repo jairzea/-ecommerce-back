@@ -11,6 +11,7 @@ class UserTest extends TestCase
 {
     public $email;
     public $password;
+    public $token;
 
     /** @test */
     function testSignUp()
@@ -34,6 +35,20 @@ class UserTest extends TestCase
             "email" => $this->email,
             "password" => $this->password
         ])->assertStatus(200);
+
+        $this->token = $loginUser->assertSee('access_token')->original['access_token'];
+        
+    }
+
+    /** @test */
+    function testLogout()
+    {
+        $this->testSignUp();
+        $this->testLogin();
+
+        $loginUser = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $this->token,
+        ])->post('api/' . env('API_VERSION') . '/auth/logout')->assertStatus(200);
         
     }
 }
