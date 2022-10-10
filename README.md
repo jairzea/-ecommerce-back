@@ -9,6 +9,7 @@
 -   Asegurese de tener PHP instalado en su equipo
 -   Asegurese de tener Laravel en su equipo
 -   Asegurese de tener un servidor apache o de base de datos para gestionar la misma.
+-   Asegurese de tener la extensión soap habilitada en su archio php.ini
 
 # Siguientes pasos
 
