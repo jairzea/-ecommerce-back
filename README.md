@@ -79,6 +79,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
+-   Copie y pege el APP_KEY del archivo .env a .env.testing
 -   Especifigue los datos de conexión a la pasarela de pago
 
 ```HTML

@@ -47,6 +47,8 @@ class PaymentController extends Controller
 
             $reference = $orderId . REFERENCE_INTERFIX . time();
 
+            $url_base = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : 'https://localhost';
+
             $paymentRequest = [
                 'payment' => [
                     'reference' => $reference,
@@ -57,7 +59,7 @@ class PaymentController extends Controller
                     ],
                 ],
                 'expiration'=> date('c', strtotime('+2 days')),
-                'returnUrl' => $_SERVER['HTTP_ORIGIN'] . env('PATH_REDIRECT_FRONT') . '?reference=' . $reference,
+                'returnUrl' => $url_base . env('PATH_REDIRECT_FRONT') . '?reference=' . $reference,
                 'ipAddress' => '127.0.0.1',
                 'userAgent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
             ];

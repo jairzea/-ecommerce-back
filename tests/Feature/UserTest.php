@@ -22,7 +22,8 @@ class UserTest extends TestCase
         $registerUser = $this->post('api/' . env('API_VERSION') . '/auth/signup', [
             "name" => "Jair Zea",
             "email" => $this->email,
-            "password" => $this->password
+            "password" => $this->password,
+            "mobile" => '333 4444567'
         ])->assertStatus(200);
     }
 
@@ -31,7 +32,7 @@ class UserTest extends TestCase
     {
         $this->testSignUp();
 
-        $loginUser = $this->post('api/' . env('API_VERSION') . '/auth/login', [
+        $loginUser = $this->post('api/' . env('API_VERSION') . '/auth/authentication', [
             "email" => $this->email,
             "password" => $this->password
         ])->assertStatus(200);

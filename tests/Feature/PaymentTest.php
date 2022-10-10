@@ -23,7 +23,7 @@ class PaymentTest extends TestCase
 
         $paymentSession = new PaymentController();
         $response = $paymentSession->createPaymentSession($request);
-
+        echo json_encode($response);
         $this->assertEquals('success', $response->original['message']);
  
     }
