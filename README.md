@@ -48,9 +48,17 @@ SERVICE_BASE_URL=
 
 ## `php artisan key:generate`
 
-## `php artisan migrate` Para reconstruir la base de datos. Si existe algún inconveniente al migrar la base de datos, puede tomar el archivo test.sql en el directorio /database eh importarlo
+## `php artisan migrate`
+
+_Para reconstruir la base de datos. Si existe algún inconveniente al migrar la base de datos, puede tomar el archivo test.sql en el directorio /database eh importarlo_
+
+## `php artisan passport:install`
+
+_Cada vez que realice una migración debera ejecutar el comando anterior_
 
 ## `php artisan serve` Para ejecutar la aplicación
+
+-   El comando anterior correra la aplicación en el dominio local: http://127.0.0.1:8000
 
 ### Tests
 

@@ -26,7 +26,6 @@ return new class extends Migration
             o.requestId, 
             o.updateD_at, 
             o.id AS id_orden, 
-            o.id_cliente, o.llave_secreta, 
             p.name AS nombre_producto, 
             p.price AS precio_producto, 
             p.img AS imagen_producto, 
