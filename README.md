@@ -9,7 +9,7 @@
 -   Asegurese de tener PHP instalado en su equipo
 -   Asegurese de tener Laravel en su equipo
 -   Asegurese de tener un servidor apache o de base de datos para gestionar la misma.
--   Asegurese de tener la extensión soap habilitada en su archio php.ini
+-   Asegurese de tener la extensión soap habilitada en su archivo php.ini
 
 # Siguientes pasos
 
@@ -45,8 +45,6 @@ SERVICE_BASE_URL=
 -   ejecute en la terminal los siguientes comandos
 
 ## `composer install`
-
--   Luego de hacer `composer install`, pegue la siguiente linea en el archivo composer.json `"dnetix/redirection": "^1.0",` en el objeto de require
 
 ## `php artisan key:generate`
 
