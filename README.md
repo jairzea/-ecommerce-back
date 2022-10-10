@@ -2,7 +2,7 @@
 
 ## Backend Tienda en linea
 
-### Congiguración de proyecto en local
+### Configuración de proyecto en local
 
 # Requisitos previos
 
@@ -34,7 +34,7 @@ DB_PASSWORD=
 ```HTML
 LOGIN=
 SECRET_KEY=
-URL_REDIRECT=
+SERVICE_BASE_URL=
 ```
 
 -   si lo desea, puede cambiar REFERENCE_INTERFIX por el interfix que usted desee
@@ -75,7 +75,7 @@ DB_PASSWORD=
 ```HTML
 LOGIN=
 SECRET_KEY=
-URL_REDIRECT=
+SERVICE_BASE_URL=
 ```
 
 -   si lo desea, puede cambiar REFERENCE_INTERFIX por el interfix que usted desee

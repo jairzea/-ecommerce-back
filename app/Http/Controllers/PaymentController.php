@@ -12,7 +12,7 @@ use Exception;
 define('REFERENCE_INTERFIX', env('REFERENCE_INTERFIX'));
 define('LOGIN', env('LOGIN'));
 define('SECRET_KEY', env('SECRET_KEY'));
-define('URL_REDIRECT', env('URL_REDIRECT'));
+define('SERVICE_BASE_URL', env('SERVICE_BASE_URL'));
 define('REST_TIMEOUT', env('REST_TIMEOUT'));
 define('REST_CONNECT_TIMEOUT', env('REST_CONNECT_TIMEOUT'));
 define('CURRENCY', env('CURRENCY'));
@@ -27,7 +27,7 @@ class PaymentController extends Controller
         $this->placetopay = new PlacetoPay([
             'login'   => LOGIN,
             'tranKey' => SECRET_KEY,
-            'url'     => URL_REDIRECT,
+            'url'     => SERVICE_BASE_URL,
             'rest'    => [
                 'timeout' => REST_TIMEOUT,
                 'connect_timeout' => REST_CONNECT_TIMEOUT,
