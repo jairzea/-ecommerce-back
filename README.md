@@ -45,6 +45,8 @@ SERVICE_BASE_URL=
 
 ## `composer install`
 
+-   Luego de hacer `composer install`, pegue la siguiente linea en el archivo composer.json `"dnetix/redirection": "^1.0",` en el objeto de require
+
 ## `php artisan key:generate`
 
 ## `php artisan migrate` Para reconstruir la base de datos. Si existe algún inconveniente al migrar la base de datos, puede tomar el archivo test.sql en el directorio /database eh importarlo
