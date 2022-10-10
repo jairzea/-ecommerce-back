@@ -22,7 +22,7 @@ class OrderController extends Controller
 
             $consult = Order::paginate($limit);
 
-            $users = array(
+            $orders = array(
                 "_rel"		=> "orders",
                 "_embedded" => array(
                     "orders" => $consult
@@ -32,7 +32,7 @@ class OrderController extends Controller
             if(empty($consult))
                 throw new Exception("No se encontraron registros");
 
-            return response()->json(["response" => $users], 200);
+            return response()->json(["response" => $orders], 200);
 
         } catch (Exception $e) {
 
@@ -66,9 +66,9 @@ class OrderController extends Controller
                 "status" => "CREATED"
             ];
 
-            Order::create($insertData);
+            $order = Order::create($insertData);
 
-            return response()->json(["message" => "Success"], 200);
+            return response()->json(["message" => "Success", "order" => $order['id']], 200);
 
         } catch (Exception $e) {
 

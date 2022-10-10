@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,8 +27,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => env('API_VERSION')], function () 
 {
-    Route::post('/auth/login',[AuthController::class, 'login']);
+    Route::post('/auth/authentication',[AuthController::class, 'login']);
+    
     Route::post('/auth/signup',[AuthController::class, 'signUp']);
+
+    Route::get('products', [ProductController::class, 'index']);
 
     Route::group(['middleware' => 'auth:api'], function() 
     {
@@ -36,7 +40,6 @@ Route::group(['prefix' => env('API_VERSION')], function ()
         // ---------------------------------------------------------------------
         // Products
         // --------------------------------------------------------------------- 
-        Route::get('products', [ProductController::class, 'index']);
         Route::post('products', [ProductController::class, 'store']);
 
         // ---------------------------------------------------------------------

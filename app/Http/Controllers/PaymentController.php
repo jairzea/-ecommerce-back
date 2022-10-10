@@ -57,7 +57,7 @@ class PaymentController extends Controller
                     ],
                 ],
                 'expiration'=> date('c', strtotime('+2 days')),
-                'returnUrl' => 'https://dev.placetopay.com/redirection/ProcesarPagoAjax.php?reference=' . $reference,
+                'returnUrl' => $_SERVER['HTTP_ORIGIN'] . env('PATH_REDIRECT_FRONT') . '?reference=' . $reference,
                 'ipAddress' => '127.0.0.1',
                 'userAgent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36',
             ];
@@ -89,6 +89,7 @@ class PaymentController extends Controller
                     'requestId' => $response->requestId,
                     'processUrl' => $response->processUrl,
                     'reference' => $paymentRequest['payment']['reference'],
+                    'status'     => 'PENDING',
                 );
     
                 $updateOrder = new OrderController();
@@ -135,7 +136,7 @@ class PaymentController extends Controller
                 $updateOrder = new OrderController();
                 $updateOrder->edit('id', $order->id, $responsePlacetopay);
 
-                return response()->json(["message" => 'success'], 200);
+                return response()->json(["message" => 'success', "response" => $responsePlacetopay], 200);
         
             } else {
 

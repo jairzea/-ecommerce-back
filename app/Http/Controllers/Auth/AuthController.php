@@ -21,6 +21,7 @@ class AuthController extends Controller
             
             $request->validate([
                 'name' => 'required|string',
+                'mobile' => 'required|string',
                 'email' => 'required|string|email|unique:users',
                 'password' => 'required|string'
             ]);
@@ -28,6 +29,7 @@ class AuthController extends Controller
             User::create([
                 'name' => $request->name,
                 'email' => $request->email,
+                'customer_mobile' => $request->mobile,
                 'password' => bcrypt($request->password)
             ]);
     
@@ -74,7 +76,8 @@ class AuthController extends Controller
             return response()->json([
                 'access_token' => $tokenResult->accessToken,
                 'token_type' => 'Bearer',
-                'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString()
+                'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString(),
+                'user' => $user
             ]);
 
         } catch (Exception $e) {
